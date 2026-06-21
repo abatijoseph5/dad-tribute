@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>THE LEGACY OF OLUWAFEMI PAUL ABATI — A Documentary</title>
+<meta name="description" content="A cinematic tribute to Oluwafemi Paul Abati — Pastor, CEO, Husband, Father. His greatest legacy was never the church or the business. It was the family he raised.">
+<meta name="theme-color" content="#0a0a08">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================== -->
+<!-- AMBIENT FILM GRAIN / VIGNETTE  -->
+<!-- ============================== -->
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ============================== -->
+<!-- OPTIONAL BACKGROUND MUSIC      -->
+<!-- ============================== -->
+<audio id="bg-score" loop preload="none">
+  <source src="assets/score.mp3" type="audio/mpeg">
+</audio>
+<button id="music-toggle" class="music-toggle" aria-pressed="false" aria-label="Toggle background score">
+  <span class="music-toggle__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <span class="music-toggle__label">SCORE</span>
+</button>
+
+<!-- ============================== -->
+<!-- CINEMATIC LOADING SCREEN       -->
+<!-- ============================== -->
+<section id="loader" class="loader" role="status" aria-live="polite">
+  <div class="loader__noise" aria-hidden="true"></div>
+  <div class="loader__content">
+    <p class="loader__studio">A&nbsp;TRIBE&nbsp;OF&nbsp;ISSACHAR&nbsp;PRODUCTION</p>
+    <h1 class="loader__title">
+      <span class="loader__line" data-line>THE&nbsp;LEGACY&nbsp;OF</span>
+      <span class="loader__line loader__line--gold" data-line>OLUWAFEMI&nbsp;PAUL&nbsp;ABATI</span>
+    </h1>
+    <div class="loader__bar-track" aria-hidden="true">
+      <div class="loader__bar-fill" id="loader-fill"></div>
+    </div>
+    <p class="loader__pct" id="loader-pct">00%</p>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- MAIN SITE                      -->
+<!-- ============================== -->
+<div id="site" class="site" hidden>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">O.P.A.</a>
+    <nav class="nav__links" aria-label="Section navigation">
+      <a href="#who-he-is">Who He Is</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#family">Family</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#dadgpt">DadGPT</a>
+      <a href="#letter">The Letter</a>
+    </nav>
+    <button class="nav__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+    <a href="#who-he-is">Who He Is</a>
+    <a href="#timeline">Timeline of Impact</a>
+    <a href="#numbers">By the Numbers</a>
+    <a href="#lessons">Lessons From Dad</a>
+    <a href="#family">Family</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#ministry">Ministry &amp; Business</a>
+    <a href="#dadgpt">DadGPT</a>
+    <a href="#funny">The Funny Moment</a>
+    <a href="#letter">The Letter</a>
+  </nav>
+
+  <!-- ============================== -->
+  <!-- HERO                           -->
+  <!-- ============================== -->
+  <section id="hero" class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__bg-layer hero__bg-layer--1"></div>
+      <div class="hero__portrait"></div>
+      <div class="hero__bg-layer hero__bg-layer--2"></div>
+      <div class="hero__rays" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">A DOCUMENTARY ABOUT THE MAN BEHIND EVERYTHING</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line">THE LEGACY OF</span>
+        <span class="hero__title-line hero__title-line--lead">OLUWAFEMI<br>PAUL ABATI</span>
+      </h1>
+      <p class="hero__narration">
+        Some men build companies. Some men build congregations.
+        This one built a home that never once forgot to call —
+        <em>"Are you alright?"</em>
+      </p>
+      <div class="hero__cta-row">
+        <button class="btn btn--gold" id="enter-btn">
+          <span>Enter the Story</span>
+        </button>
+        <a href="#letter" class="btn btn--ghost">Skip to The Letter</a>
+      </div>
+    </div>
+
+    <div class="hero__lower-third" aria-hidden="true">
+      <span class="lower-third__name">OLUWAFEMI PAUL ABATI</span>
+      <span class="lower-third__role">PASTOR&nbsp;·&nbsp;CEO&nbsp;·&nbsp;HUSBAND&nbsp;·&nbsp;FATHER</span>
+    </div>
+
+    <button class="scroll-cue" id="scroll-cue" aria-label="Scroll to next section">
+      <span class="scroll-cue__line"></span>
+      <span class="scroll-cue__text">SCROLL</span>
+    </button>
+  </section>
+
+  <!-- ============================== -->
+  <!-- WHO HE IS                      -->
+  <!-- ============================== -->
+  <section id="who-he-is" class="who reveal-section">
+    <div class="section-head">
+      <p class="section-head__tag">REEL ONE — 00:01:12</p>
+      <h2 class="section-head__title">Who He Is</h2>
+    </div>
+
+    <div class="who__grid">
+      <article class="who__card reveal-item">
+        <span class="who__icon" aria-hidden="true">✝</span>
+        <h3>Pastor</h3>
+        <p>Shepherd of Tribe of Issachar Church. He doesn't preach from a distance — he calls, he checks in, he shows up at 6am because someone needed prayer before sunrise.</p>
+      </article>
+
+      <article class="who__card reveal-item">
+        <span class="who__icon" aria-hidden="true">◆</span>
+        <h3>CEO</h3>
+        <p>Built a business from nothing but conviction. To him, profit was never the point — provision was. "It's my job to provide na."</p>
+      </article>
+
+      <article class="who__card reveal-item">
+        <span class="who__icon" aria-hidden="true">♥</span>
+        <h3>Husband</h3>
+        <p>For over two decades, the steady hand beside Grace Otuwe Abati. Not a perfect marriage — a faithful one. That's rarer.</p>
+      </article>
+
+      <article class="who__card reveal-item">
+        <span class="who__icon" aria-hidden="true">⌂</span>
+        <h3>Father</h3>
+        <p>To Joy, Joshua, Israel, and T.J — he is the first voice that taught them what safety sounds like.</p>
+      </article>
+
+      <article class="who__card reveal-item">
+        <span class="who__icon" aria-hidden="true">▲</span>
+        <h3>Leader</h3>
+        <p>People follow him not because he demands it, but because he's already walking toward the hard thing first.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- TIMELINE OF IMPACT             -->
+  <!-- ============================== -->
+  <section id="timeline" class="timeline reveal-section">
+    <div class="section-head">
+      <p class="section-head__tag">REEL TWO — ARCHIVE FOOTAGE</p>
+      <h2 class="section-head__title">Timeline of Impact</h2>
+    </div>
+
+    <div class="timeline__track">
+      <div class="timeline__line" aria-hidden="true">
+        <div class="timeline__line-fill" id="timeline-fill"></div>
+      </div>
+
+      <ol class="timeline__list">
+        <li class="timeline__item reveal-item" data-timecode="00:00">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <span class="timeline__code">FAMILY</span>
+            <h3>A Marriage Begins</h3>
+            <p>He says "I do" to Grace — and quietly commits to a lifetime of showing up, even on the hard days.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal-item" data-timecode="00:00">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <span class="timeline__code">FAMILY</span>
+            <h3>Joy, Joshua, Israel &amp; T.J Arrive</h3>
+            <p>Four children. Four reasons to never stop working. Four reasons to never stop praying either.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal-item" data-timecode="00:00">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <span class="timeline__code">MINISTRY</span>
+            <h3>Tribe of Issachar Church Is Born</h3>
+            <p>What starts as a small gathering of believers becomes a place where the broken are told the truth: you are seen.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal-item" data-timecode="00:00">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <span class="timeline__code">BUSINESS</span>
+            <h3>The Company Takes Shape</h3>
+            <p>No inheritance, no shortcuts. Just a man who decided his family would never wonder if he was trying hard enough.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal-item" data-timecode="00:00">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <span class="timeline__code">LEADERSHIP</span>
+            <h3>The Hills Foundation Launches</h3>
+            <p>Because helping people was never confined to Sunday. It became infrastructure, not just intention.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal-item" data-timecode="NOW">
+          <div class="timeline__dot timeline__dot--active" aria-hidden="true"></div>
+          <div class="timeline__body">
+            <span class="timeline__code">TODAY</span>
+            <h3>Still Calling to Ask "Are You Alright?"</h3>
+            <p>Decades in, nothing has changed about the question he asks first. That consistency — that's the legacy.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- BY THE NUMBERS                 -->
+  <!-- ============================== -->
+  <section id="numbers" class="numbers reveal-section">
+    <div class="numbers__bg" aria-hidden="true"></div>
+    <div class="section-head section-head--center">
+      <p class="section-head__tag">BY THE NUMBERS</p>
+      <h2 class="section-head__title">A Life, Measured</h2>
+    </div>
+
+    <div class="numbers__grid">
+      <div class="number-card reveal-item">
+        <span class="number-card__value" data-count-to="45" data-suffix="+">0</span>
+        <span class="number-card__label">Years of Purpose</span>
+      </div>
+      <div class="number-card reveal-item">
+        <span class="number-card__value number-card__value--infinity" data-infinity>0</span>
+        <span class="number-card__label">Prayers Said</span>
+      </div>
+      <div class="number-card reveal-item">
+        <span class="number-card__value" data-count-to="999" data-suffix="+">0</span>
+        <span class="number-card__label">Lives Impacted</span>
+      </div>
+      <div class="number-card reveal-item number-card--feature">
+        <span class="number-card__value number-card__value--one">1</span>
+        <span class="number-card__label">Extraordinary Father</span>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="lessons" class="lessons reveal-section">
+    <div class="section-head">
+      <p class="section-head__tag">REEL THREE — THE TEACHINGS</p>
+      <h2 class="section-head__title">Lessons From Dad</h2>
+    </div>
+
+    <div class="lessons__rail" id="lessons-rail">
+      <article class="lesson-card reveal-item">
+        <span class="lesson-card__mark">“</span>
+        <h3>Be Genuine</h3>
+        <p>Never perform for people. Be the same man in the boardroom, the pulpit, and the kitchen at midnight.</p>
+      </article>
+      <article class="lesson-card reveal-item">
+        <span class="lesson-card__mark">“</span>
+        <h3>Help People</h3>
+        <p>If you can carry someone else's load for a moment, you were given strength for exactly that reason.</p>
+      </article>
+      <article class="lesson-card reveal-item">
+        <span class="lesson-card__mark">“</span>
+        <h3>Faith</h3>
+        <p>Belief isn't a Sunday costume. It's the thing you reach for first when the bank account says no and the bills say yes.</p>
+      </article>
+      <article class="lesson-card reveal-item">
+        <span class="lesson-card__mark">“</span>
+        <h3>Responsibility</h3>
+        <p>"It's my job to provide na." Not a complaint. A conviction, repeated like a heartbeat.</p>
+      </article>
+      <article class="lesson-card reveal-item">
+        <span class="lesson-card__mark">“</span>
+        <h3>Leadership</h3>
+        <p>Go first. Take the hit first. Ask the hard question first. Then everyone else finds the courage to follow.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- FAMILY                         -->
+  <!-- ============================== -->
+  <section id="family" class="family reveal-section">
+    <div class="section-head section-head--center">
+      <p class="section-head__tag">THE PEOPLE WHO CALL HIM DAD</p>
+      <h2 class="section-head__title">Family</h2>
+    </div>
+
+    <div class="family__grid">
+      <article class="family-card family-card--lead reveal-item">
+        <div class="family-card__frame" data-src="assets/mumphoto.jpg"><span class="family-card__initial">G</span></div>
+        <h3>Grace Otuwe Abati</h3>
+        <p class="family-card__role">Wife</p>
+        <p class="family-card__note">The one who knows the man behind the pulpit and the office, and chose him anyway, every single day.</p>
+      </article>
+
+      <article class="family-card reveal-item">
+        <div class="family-card__frame" data-src="assets/joyphoto.jpg"><span class="family-card__initial">J</span></div>
+        <h3>Joy</h3>
+        <p class="family-card__role">Daughter</p>
+      </article>
+
+      <article class="family-card reveal-item">
+        <div class="family-card__frame" data-src="assets/joshuaphoto.jpg"><span class="family-card__initial">J</span></div>
+        <h3>Joshua</h3>
+        <p class="family-card__role">Son</p>
+      </article>
+
+      <article class="family-card reveal-item">
+        <div class="family-card__frame" data-src="assets/israelphoto.jpeg"><span class="family-card__initial">I</span></div>
+        <h3>Israel</h3>
+        <p class="family-card__role">Son</p>
+      </article>
+
+      <article class="family-card reveal-item">
+        <div class="family-card__frame" data-src="assets/tjphoto.jpg"><span class="family-card__initial">T</span></div>
+        <h3>T.J</h3>
+        <p class="family-card__role">Son · Narrator of this documentary</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- PHOTO GALLERY                  -->
+  <!-- ============================== -->
+  <section id="gallery" class="gallery reveal-section">
+    <div class="section-head">
+      <p class="section-head__tag">ARCHIVE</p>
+      <h2 class="section-head__title">Photo Gallery</h2>
+      <p class="section-head__sub">A few frames from the family archive.</p>
+    </div>
+
+    <div class="masonry" id="masonry-gallery">
+      <!-- Drop your photos into assets/gallery/ named photo1.jpg through photo12.jpg
+           and they will appear automatically. data-src tells script.js which file to load.
+           If a file is missing, the gold placeholder pattern just stays in place — no errors. -->
+      <figure class="masonry__item reveal-item" data-size="tall"><div class="masonry__ph" data-src="assets/photo01.jpg"></div></figure>
+      <figure class="masonry__item reveal-item" data-size="wide"><div class="masonry__ph" data-src="assets/photo02.jpg"></div></figure>
+      <figure class="masonry__item reveal-item"><div class="masonry__ph" data-src="assets/photo03.jpg"></div></figure>
+      <figure class="masonry__item reveal-item" data-size="tall"><div class="masonry__ph" data-src="assets/photo04.jpg"></div></figure>
+      <figure class="masonry__item reveal-item" data-size="tall"><div class="masonry__ph" data-src="assets/photo06.jpeg"></div></figure>
+      <figure class="masonry__item reveal-item" data-size="wide"><div class="masonry__ph" data-src="assets/photo07.jpeg"></div></figure>
+      <figure class="masonry__item reveal-item" data-size="tall"><div class="masonry__ph" data-src="assets/photo08.jpeg"></div></figure>
+      <figure class="masonry__item reveal-item"><div class="masonry__ph" data-src="assets/mumphoto.jpg"></div></figure>
+      <figure class="masonry__item reveal-item" data-size="wide"><div class="masonry__ph" data-src="assets/joyphoto.jpg"></div></figure>
+      <figure class="masonry__item reveal-item"><div class="masonry__ph" data-src="assets/joshuaphoto.jpg"></div></figure>
+      <figure class="masonry__item reveal-item" data-size="tall"><div class="masonry__ph" data-src="assets/israelphoto.jpeg"></div></figure>
+      <figure class="masonry__item reveal-item" data-size="tall"><div class="masonry__ph" data-src="assets/tjphoto.jpg"></div></figure>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- MINISTRY & BUSINESS            -->
+  <!-- ============================== -->
+  <section id="ministry" class="ministry reveal-section">
+    <div class="section-head">
+      <p class="section-head__tag">REEL FOUR — THE WORK</p>
+      <h2 class="section-head__title">Ministry &amp; Business</h2>
+    </div>
+
+    <div class="ministry__cols">
+      <article class="ministry__col reveal-item">
+        <span class="ministry__kicker">MINISTRY</span>
+        <h3>Tribe of Issachar Church</h3>
+        <p>Named for the tribe known for understanding the times — a fitting name for a man who always seems to know exactly when someone needs to hear "you are not alone."</p>
+        <p>Here, sermons are personal letters disguised as Sunday messages. People don't just attend — they're checked on, by name, by phone, by 7am text.</p>
+      </article>
+
+      <article class="ministry__col reveal-item">
+        <span class="ministry__kicker">BUSINESS</span>
+        <h3>The Hills Foundation</h3>
+        <p>Built not to chase margins but to fund mercy. Every contract signed was, in his mind, just another way to keep a promise made to his family years earlier: that they would never go without.</p>
+        <p>The foundation now extends that same promise outward — to families who aren't his, but who he's decided to provide for anyway.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- DADGPT                         -->
+  <!-- ============================== -->
+  <section id="dadgpt" class="dadgpt reveal-section">
+    <div class="section-head section-head--center">
+      <p class="section-head__tag">INTERACTIVE — ASK HIM ANYTHING</p>
+      <h2 class="section-head__title">DadGPT</h2>
+      <p class="section-head__sub">Trained exclusively on 45 years of fatherly wisdom, mild concern, and provision.</p>
+    </div>
+
+    <div class="dadgpt__terminal">
+      <div class="dadgpt__bar">
+        <span class="dadgpt__dot"></span><span class="dadgpt__dot"></span><span class="dadgpt__dot"></span>
+        <span class="dadgpt__bar-title">dadgpt — live session</span>
+      </div>
+
+      <div class="dadgpt__screen" id="dadgpt-screen" role="log" aria-live="polite">
+        <p class="dadgpt__line dadgpt__line--bot">
+          <span class="dadgpt__tag">DAD</span> Good, you're here. Are you alright? Ask me something.
+        </p>
+      </div>
+
+      <div class="dadgpt__suggestions" id="dadgpt-suggestions">
+        <button data-q="What is success?">What is success?</button>
+        <button data-q="What should I do when life gets hard?">Life is hard right now</button>
+        <button data-q="Dad, can I have money?">Dad, can I have money?</button>
+        <button data-q="Are you alright?">Are you alright?</button>
+      </div>
+
+      <form class="dadgpt__form" id="dadgpt-form">
+        <label for="dadgpt-input" class="sr-only">Ask Dad a question</label>
+        <input type="text" id="dadgpt-input" autocomplete="off" placeholder="Type your question for Dad...">
+        <button type="submit" class="btn btn--gold btn--small">Ask</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- FUNNY MOMENT — EASTER EGG      -->
+  <!-- ============================== -->
+  <section id="funny" class="funny reveal-section">
+    <div class="section-head section-head--center">
+      <p class="section-head__tag">DOCUMENTARY FLASHBACK</p>
+      <h2 class="section-head__title">The ChatGPT Incident</h2>
+    </div>
+
+    <div class="funny__card reveal-item">
+      <div class="funny__chat">
+        <div class="funny__bubble funny__bubble--dad">
+          <span class="funny__sender">DAD</span>
+          Generate a graphic for the church anniversary flyer.
+        </div>
+        <div class="funny__bubble funny__bubble--ai">
+          <span class="funny__sender">AI</span>
+          I'm sorry, but I can't generate that image — it violates our content policy.
+        </div>
+        <div class="funny__bubble funny__bubble--dad funny__bubble--punch">
+          <span class="funny__sender">DAD</span>
+          Are you alright? What's violating anything?
+        </div>
+      </div>
+      <p class="funny__caption">Reader, the AI did not have an answer. Neither do we. We simply preserved the moment for posterity.</p>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- LETTER FROM T.J                -->
+  <!-- ============================== -->
+  <section id="letter" class="letter reveal-section">
+    <div class="letter__paper reveal-item">
+      <p class="letter__kicker">A LETTER FROM T.J</p>
+      <p class="letter__body">
+        Dad,<br><br>
+        I don't think I ever told you that I noticed. I noticed the early mornings, the calls you took outside so we wouldn't hear the worry in your voice, the way you'd still ask "are you alright?" even on the days you clearly weren't.<br><br>
+        You built a church. You built a company. People will write about The Hills Foundation and Tribe of Issachar, and they should — those things mattered. But none of it is the thing I'll tell my own children about.<br><br>
+        I'll tell them about a man who said "it's my job to provide na" like it was the simplest fact in the world, and then quietly made it true for thirty years straight. I'll tell them about a father who apologized first, even when he didn't have to, because being right always mattered less to him than being good.<br><br>
+        Your greatest work was never on a stage or in a contract. It was us. It was Mum's laugh staying easy after all these years. It was Joy, Joshua, Israel, and me — turning out alright, because you kept asking if we were.<br><br>
+        Happy Father's Day. Are <em>you</em> alright? I hope, for once, you let yourself say no, and let someone else carry it.<br><br>
+        With everything,<br>T.J
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- FINAL CINEMATIC ENDING         -->
+  <!-- ============================== -->
+  <section id="finale" class="finale reveal-section">
+    <div class="finale__bg" aria-hidden="true"></div>
+    <div class="finale__content">
+      <p class="finale__line reveal-item">The church was built.</p>
+      <p class="finale__line reveal-item">The businesses were built.</p>
+      <p class="finale__line finale__line--gold reveal-item">But your greatest work was the family you raised.</p>
+
+      <div class="finale__credit reveal-item">
+        <h2 class="finale__name">OLUWAFEMI PAUL ABATI</h2>
+        <p class="finale__roles">PASTOR&nbsp;·&nbsp;CEO&nbsp;·&nbsp;FATHER&nbsp;·&nbsp;LEGACY</p>
+      </div>
+
+      <p class="finale__footer reveal-item">Happy Father's Day, Dad. — Joy, Joshua, Israel &amp; T.J</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Made with love, late at night, by one of the four people lucky enough to call him Dad.</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
