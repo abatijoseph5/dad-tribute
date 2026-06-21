@@ -221,9 +221,22 @@
      =================================================================== */
   function initGalleryPhotos() {
     const targets = document.querySelectorAll('[data-src]');
+    const extensionsToTry = ['.jpg', '.jpeg', '.JPG', '.JPEG', '.png', '.PNG', '.webp'];
+
     targets.forEach((el) => {
-      const src = el.getAttribute('data-src');
-      if (!src) return;
+      const base = el.getAttribute('data-src');
+      if (!base) return;
+
+      // If the path already ends in a known extension, just try that exact path.
+      const hasExtension = /\.(jpe?g|png|webp)$/i.test(base);
+      const candidates = hasExtension ? [base] : extensionsToTry.map((ext) => base + ext);
+
+      tryNext(el, candidates, 0);
+    });
+
+    function tryNext(el, candidates, index) {
+      if (index >= candidates.length) return; // none worked — leave placeholder as-is
+      const src = candidates[index];
       const img = new Image();
       img.onload = () => {
         el.style.backgroundImage = `url('${src}')`;
@@ -231,11 +244,9 @@
         el.style.backgroundPosition = 'center';
         el.classList.add('has-photo');
       };
-      img.onerror = () => {
-        // File not found yet — leave placeholder as-is.
-      };
+      img.onerror = () => tryNext(el, candidates, index + 1);
       img.src = src;
-    });
+    }
   }
 
   /* ===================================================================
